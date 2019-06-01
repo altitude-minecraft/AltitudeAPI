@@ -1,0 +1,5 @@
+only-players: "Only players can run that command."
+usage-format: "&6&lUSAGE &e» &7{message}"
+no-permission: "&4&lERROR &e» You don't have permission to do that."
+no-subs: "&4&lERROR &e» You don't have access to any sub-commands."
+header-footer: "&7&m-----------------------------------"

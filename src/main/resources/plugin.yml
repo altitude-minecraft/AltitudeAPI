@@ -1,0 +1,4 @@
+main: com.alttd.altitudeapi.AltitudeAPI
+name: AltitudeAPI
+version: ${project.version}
+author: Michael Ziluck
