@@ -259,15 +259,11 @@ public class ItemDb
         try (final BufferedReader reader = new BufferedReader(new FileReader(file)))
         {
             final List<String> lines = new ArrayList<>(9000);
-            String line = null;
-            do
+            String line;
+            while ((line = reader.readLine()) != null)
             {
-                if ((line = reader.readLine()) == null)
-                {
-                    break;
-                }
                 lines.add(line);
-            } while (true);
+            }
             return lines;
         }
         catch (IOException ex)

@@ -133,7 +133,7 @@ public class CommandArgumentBuilder<T>
 
     public static <T> CommandArgumentBuilder<T> createBuilder(Class<T> type)
     {
-        return new CommandArgumentBuilder<T>();
+        return new CommandArgumentBuilder<>();
     }
 
 }

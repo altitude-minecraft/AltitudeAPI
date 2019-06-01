@@ -170,7 +170,7 @@ public abstract class ValidBaseCommand extends ValidCommand
      * @param sender the sender of the command.
      * @param label  the labels that this command has.
      */
-    public void help(CommandSender sender, String label[])
+    public void help(CommandSender sender, String[] label)
     {
         List<ValidCommand> allowedSubs = new LinkedList<>();
         for (ValidCommand sub : subCommands)

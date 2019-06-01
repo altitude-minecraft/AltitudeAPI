@@ -198,7 +198,7 @@ public class CollectionUtils
      */
     public static <T> T randomValue(Collection<T> collection)
     {
-        return randomValue(collection, null);
+        return randomValue(collection, (T) null);
     }
 
     /**
@@ -210,6 +210,7 @@ public class CollectionUtils
      *
      * @return a random value from the collection.
      */
+    @SafeVarargs
     public static <T> T randomValue(Collection<T> collection, T... ignored)
     {
         // if it's null or empty, we don't care

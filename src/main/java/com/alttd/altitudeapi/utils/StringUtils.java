@@ -11,7 +11,7 @@ public class StringUtils
 
         for (int i = start; i < end; i++)
         {
-            sb.append(strings[i] + " ");
+            sb.append(strings[i]).append(" ");
         }
 
         return sb.toString().trim();
@@ -20,10 +20,7 @@ public class StringUtils
     public static String[] add(String[] array, String add)
     {
         String[] values = new String[array.length + 1];
-        for (int i = 0; i < array.length; i++)
-        {
-            values[i] = array[i];
-        }
+        System.arraycopy(array, 0, values, 0, array.length);
         values[array.length] = add;
         return values;
     }
@@ -49,11 +46,11 @@ public class StringUtils
             return str;
         }
 
-        final int newCodePoints[] = new int[strLen]; // cannot be longer than
+        final int[] newCodePoints = new int[strLen]; // cannot be longer than
         // the char array
         int outOffset = 0;
         newCodePoints[outOffset++] = newCodePoint; // copy the first codepoint
-        for (int inOffset = Character.charCount(firstCodepoint); inOffset < strLen;)
+        for (int inOffset = Character.charCount(firstCodepoint); inOffset < strLen; )
         {
             final int codepoint = str.codePointAt(inOffset);
             newCodePoints[outOffset++] = codepoint; // copy the remaining ones

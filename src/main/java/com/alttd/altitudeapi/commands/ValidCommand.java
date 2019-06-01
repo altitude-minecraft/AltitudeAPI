@@ -261,7 +261,7 @@ public abstract class ValidCommand
             }
             else
             {
-                return Arrays.asList();
+                return Collections.emptyList();
             }
         }
         else
@@ -473,11 +473,11 @@ public abstract class ValidCommand
      */
     protected boolean matches(String label)
     {
-        label = label.toLowerCase();
         if (label == null)
         {
             return false;
         }
+        label = label.toLowerCase();
         if (label.equals(getName()))
         {
             return true;
